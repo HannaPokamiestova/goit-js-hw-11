@@ -1,6 +1,5 @@
 import { fetchImages } from './js/fetchImages';
 import Notiflix from 'notiflix';
-import axios from 'axios';
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
