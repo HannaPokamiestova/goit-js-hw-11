@@ -1,4 +1,6 @@
 import { fetchImages } from './js/fetchImages';
+import Notiflix from 'notiflix';
+import axios from 'axios';
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
@@ -68,10 +70,11 @@ function setLoadMore(totalHits) {
 
 if (searchParams.currentPage < searchParams.totalPages) {
   refs.loadBtn.style.display = 'block';
+
   return;
 }
-console.log(`refs.loadBtn`, refs.loadBtn);
-// refs.loadBtn.style.display = 'none';
+
+refs.loadBtn.style.display = 'none';
 Notiflix.Notify.info(
   "We're sorry, but you've reached the end of search results."
 );
